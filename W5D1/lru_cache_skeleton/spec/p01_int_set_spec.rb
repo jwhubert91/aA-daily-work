@@ -1,5 +1,6 @@
 require 'rspec'
 require 'p01_int_set'
+require 'byebug'
 
 describe MaxIntSet do
   let(:set) { MaxIntSet.new(50) }
@@ -27,6 +28,7 @@ describe MaxIntSet do
 
     it "values in the store should be booleans corresponding to presence" do
       set.insert(1)
+      # debugger
       expect(set.store[1]).to be true
     end
   end
