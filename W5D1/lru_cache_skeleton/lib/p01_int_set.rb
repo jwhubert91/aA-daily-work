@@ -1,14 +1,21 @@
+require "Set"
+
 class MaxIntSet
   def initialize(max)
+    @max = max
+    @store = Array.new(@max,false)
   end
 
   def insert(num)
+    raise "out of bounds" if num > @max || num < 0
+    @store[num] = true
   end
 
   def remove(num)
   end
 
   def include?(num)
+    @store[num]
   end
 
   private
@@ -27,12 +34,14 @@ class IntSet
   end
 
   def insert(num)
+    @store << num
   end
 
   def remove(num)
   end
 
   def include?(num)
+    @store.include?(num)
   end
 
   private
