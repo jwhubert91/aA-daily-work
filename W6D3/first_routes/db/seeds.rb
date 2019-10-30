@@ -12,7 +12,5 @@ ActiveRecord::Base.transaction do
 
 User.destroy_all
 
-david = User.create(name:'David',email:'david@email.com')
-james = User.create(name:'James',email:'james@email.com')
 
 end

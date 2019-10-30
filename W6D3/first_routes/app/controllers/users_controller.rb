@@ -36,13 +36,13 @@ class UsersController < ApplicationController
 
         user.destroy
 
-        render json: "user #{user[:name]} successfully deleted"
+        render json: "user #{user[:username]} successfully deleted"
 
     end
 
     private
     def user_params
-        params.require(:user).permit(:name,:email)
+        params.require(:user).permit(:username)
     end
 
 end
