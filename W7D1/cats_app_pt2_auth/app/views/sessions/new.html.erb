@@ -1,0 +1,30 @@
+<h1> Log In </h1>
+<h2>Please Enter Username and Password: </h2>
+ 
+<form action="<% session_url %>" method="POST">
+    <label>
+        Username:
+    </label>
+    <input type="text" name="session[username]">
+
+    <label>
+        Password:
+    </label>
+    <input type="password" name="session[password]"> 
+
+    <input type="submit" value="Login">
+</form>
+
+<!--
+Homepage of site -> button sign in -> sessions_controller#new -> new.html.erb 
+
+-> fills out all the data in the form
+
+New request:
+ -> click submit -> data goes to the sessions#create action 
+
+
+
+
+
+-->
